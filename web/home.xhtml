@@ -4,7 +4,7 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
-
+<h:outputStylesheet library="css" name="default.css"  />
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--        <h:outputStylesheet name="./css/default.css"/>
@@ -15,7 +15,7 @@
     </h:head>
 
     <h:body>
-        <nav id="navbar">
+        <nav id="navbar" class="global-nav">
             <ul>
                 <li><h:link value="Home" outcome="home.xhtml" /></li>
                 <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>

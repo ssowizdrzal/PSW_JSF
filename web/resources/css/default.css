@@ -27,3 +27,21 @@ a:link:hover, a:visited:hover  {
   font-weight : bold;
   text-decoration : underline;
 }
+
+
+global-nav{
+    margin-left: auto;
+    margin-right:1%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+}
+
+nav.global-nav ul{
+  list-style-type: none;
+}
+
+nav.global-nav ul link{
+    text-decoration:none;
+}
