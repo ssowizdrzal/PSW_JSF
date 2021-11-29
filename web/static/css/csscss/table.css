@@ -1,0 +1,141 @@
+body{
+    background: rgb(157,154,213);
+background: linear-gradient(90deg, rgba(157,154,213,1) 0%, rgba(130,221,255,1) 48%, rgba(0,212,255,1) 96%);
+}
+
+
+
+
+
+
+
+
+
+
+.tdright{
+    border: 1px solid black;
+    text-align: right;
+}
+
+.tdimage{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.table{
+    border: 1px solid black;
+}
+
+.tabela_wynikow{
+    padding-left: 10px;
+}
+
+table.styled-table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);   
+}
+
+.styled-table thead tr {
+    background-color: rgba(40, 89, 250,0.8);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid rgba(40, 89, 250, 0.5);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(98, 171, 255, 0.8);
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 10px solid #000000;
+}
+
+.td, .tr, .th{
+    border: 1px solid black;
+}
+
+.td:empty{
+    background: rgba(233, 225, 122,0.5);
+}
+
+.tekst{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 200%;
+    font-variant: normal;
+}
+
+.tekst2{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 200%;
+    font-variant: small-caps;
+}
+
+.aside {
+    width: 30%;
+    height: 100px;
+    padding-top: 25px;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    
+    border-image-slice: 12;
+    border-image-width: 12px 12px 12px 12px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round repeat; 
+    border-image-source: url('https://i1.wp.com/css-tricks.com/wp-content/uploads/2017/09/repeating-linear-gradient.png?fit=1800%2C900&ssl=1');
+    border-style: solid; 
+  }
+
+
+h2{
+    text-shadow: 2px 2px hsla(225, 2%, 49%, 0.9);
+}
+
+
+
+.divraportlinkow{
+    visibility:hidden;
+    margin: 10px;
+    border: #000000;
+    border-radius: 5px;
+    border-style: solid;
+    width: 1000px;
+    background: grey;
+}
+
+.divraportzdjec{
+    visibility:hidden;
+    margin: 10px;
+    border: #000000;
+    border-radius: 5px;
+    border-style: solid;
+    width: 1000px;
+    background: grey;
+}
+
+.divraportanchorow{
+    visibility:hidden;
+    margin: 10px;
+    border: #000000;
+    border-radius: 5px;
+    border-style: solid;
+    width: 1000px;
+    background: grey;
+}

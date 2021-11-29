@@ -1,0 +1,30 @@
+input:checked {
+    height: 25px;
+    width: 25px;
+}
+
+
+input[type=text]:enabled , textarea:enabled, select:enabled, input[list="months"]:enabled, input[type="tel"]:enabled {
+    background: #d8d8d7;
+}
+  
+input[type="text"]:disabled {
+    background: #dddddd;
+}
+
+input:focus:not(input[type="color"]) {
+    background-color: rgb(193, 196, 168);
+  }
+
+input[type=text]:focus {
+    background: rgb(193, 196, 168);
+}
+
+input[type=text]:required {
+    border-width: 3px;
+    border-color:  red;
+}
+
+input:required {
+    background: red;
+}

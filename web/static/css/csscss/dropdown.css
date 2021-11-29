@@ -1,0 +1,74 @@
+:root {
+    --dropdown-hover-li: #3385ff;
+    --dropdown-hover-a: #000000;
+    
+}
+
+.drop-down-menu
+{
+    list-style: none;
+    padding-top: 10px;
+    margin: 0;
+}
+
+
+.drop-down-menu > li
+{
+    float: left;
+    width: 200px;
+}
+
+.drop-down-menu li{
+
+    position: relative;
+    height: 30px;
+    background: var(--main-alt-color);
+
+}
+
+.drop-down-menu a:hover {
+     color: var(--dropdown-hover-a) 
+}
+
+.drop-down-menu li:hover 
+{
+    background: var(--dropdown-hover-li);
+}
+
+.drop-down-menu li:hover > ul
+{
+    display: inline;
+}
+
+.drop-down-menu a 
+{
+    color: white;
+    text-decoration: none;
+    padding: 0 0 0 15px;
+    display: block;
+    line-height: 30px;
+}
+
+ul.drop-down-menu li > ul {
+    position: absolute;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+ul.drop-down-menu > li > ul > li > ul 
+{
+    top: 2px;
+    right: -200px;
+
+}
+
+
+ul.drop-down-menu > li > ul
+{
+    top: 30px;
+    left: 5px;
+
+}

@@ -1,0 +1,55 @@
+.flexbox {
+   width: 900px;
+   height: 500px;
+   display: -webkit-box;
+   -webkit-box-orient: horizontal;
+   -ms-box-orient: horizontal;
+   -o-box-orient: horizontal;
+   -moz-box-orient: horizontal;
+}
+
+.flexbox > div {
+   -webkit-transition: 1.5s  ease-out;
+   -moz-transition: 1.5s  ease-out;
+   -o-transition: 1.5s  ease-out;
+   -ms-transition: 1.5s  ease-out;
+   transition: 1.5s  ease-out;
+   -webkit-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   border: 2px solid black;
+   width: 150px;
+   margin: 10px -10px 10px 0px;
+   padding: 20px 20px 20px 20px;
+   box-shadow: 10px 10px 10px dimgrey;
+}
+
+.flexbox > div:nth-child(1){ background-color: lightgrey; }
+.flexbox > div:nth-child(2){ background-color: lightgrey; }
+.flexbox > div:nth-child(3){ background-color: lightgrey; }
+.flexbox > div:nth-child(4){ background-color: lightgrey; }
+.flexbox > div:nth-child(5){ background-color: lightgrey; }
+
+
+.flexbox > div:hover { 
+   width: 300px; color: white; font-weight: bold; }
+
+.flexbox > div:hover p { 
+   height: calc(1em*24);
+
+   }
+
+.flexbox > div:nth-child(1):hover { background-color: darkblue; }
+.flexbox > div:nth-child(2):hover { background-color: darkgreen; }
+.flexbox > div:nth-child(3):hover { background-color: darkgoldenrod; }
+.flexbox > div:nth-child(4):hover { background-color: darkorange; }
+.flexbox > div:nth-child(5):hover { background-color: darkred; }
+
+.flexbox-lanes p { height: calc(1em*16); overflow: hidden; font-family: "Rosario" }
+
+.hodowla > * {
+   float: left;
+   background-image: url(https://static.wikia.nocookie.net/leagueoflegends/images/7/78/Order_Minion_Caster_Render.png/revision/latest?cb=20200601043520);
+}

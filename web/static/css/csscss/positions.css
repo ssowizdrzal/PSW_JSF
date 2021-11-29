@@ -1,0 +1,46 @@
+.positions-1 {
+    float: left;
+}
+
+.positions-2 {
+    clear: left;
+}
+
+.positions-3 {
+    position: absolute;
+    left: 500px;
+    top: 350px;
+}
+
+.positions-4 {
+    position: absolute;
+    right: 500px;
+    bottom: 350px;
+}
+
+.positions-5 {
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+.positions-6 {
+    position: static;
+    left: 50px;
+    top: 50px;
+}
+
+.positions div:not(.positions-5) {
+    height: 400px;
+    width: 300px;
+}
+
+.positions div :first-child {
+  background-color: brown;
+
+}
+
+.positions div :last-child {
+    background-color: chartreuse;
+  
+  }
