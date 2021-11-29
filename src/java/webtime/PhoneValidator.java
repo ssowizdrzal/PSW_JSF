@@ -1,8 +1,9 @@
+package webtime;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package webtime;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,34 +14,33 @@ import javax.faces.validator.FacesValidator;
 import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 
-@FacesValidator("emailValidatorr")
-public class EmailValidator implements Validator {
+@FacesValidator("phoneValidatorr")
+public class PhoneValidator implements Validator {
 
-    private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\." +
-			"[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*" +
-			"(\\.[A-Za-z]{2,})$";
+    private static final String EMAIL_PATTERN = "^[1-9]\\d{2}-\\d{3}-\\d{3}$";
     
     private Pattern pattern;
     private Matcher matcher;
         
-    public EmailValidator(){
-		  pattern = Pattern.compile(EMAIL_PATTERN);
-	}
+    public PhoneValidator(){
+	 pattern = Pattern.compile(EMAIL_PATTERN);
+    }
     
-    @Override
+    
+     @Override
 	public void validate(FacesContext context, UIComponent component,
 			Object value) throws ValidatorException {
 		
-		matcher = pattern.matcher(value.toString());
-		if(!matcher.matches()){
+	matcher = pattern.matcher(value.toString());
+	if(!matcher.matches()){
 			
-			FacesMessage msg = 
-				new FacesMessage("E-mail validation failed.", 
-						"Invalid E-mail format.");
-			msg.setSeverity(FacesMessage.SEVERITY_ERROR);
-			throw new ValidatorException(msg);
+		FacesMessage msg = 
+			new FacesMessage("Phone validation failed.", 
+						"Invalid Phone number format.");
+		msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+		throw new ValidatorException(msg);
 
-		}
+	}
 
 	}
     

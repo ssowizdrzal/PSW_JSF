@@ -5,7 +5,11 @@
 package webtime;
 
 import java.io.Serializable;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
+@ManagedBean( name="personBean" )
+@SessionScoped
 public class Person implements Serializable {
     private String nazwisko;
     private String email;
@@ -13,15 +17,17 @@ public class Person implements Serializable {
     private long wiek;
     private String miasto;
     private int stopien;
-
     
     
-    
-    
-    
-    
-    
-    
+    public String getResult()
+   {
+      if ( nazwisko != null && email != null && phone != null )
+         return "<p style=\"background-color:#696969;width:1000px;" +
+            "padding:5px\">Name: " + getNazwisko() + "<br/>E-Mail: " +
+            getEmail() + "<br/>Phone: " + getPhone() + "<br/>Miasto: " + getMiasto()+ "<br/>Stopień: " + getStopien() + "</p>";
+      else
+         return ""; // request has not yet been made
+   } 
     
     
     
