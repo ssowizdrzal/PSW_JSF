@@ -3,18 +3,9 @@ body {
     font-size: 12px;
     font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     color: #000000;  
-    margin: 10px;
+    margin: 0px;
 }
 
-h1 {
-    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
-    border-bottom: 1px solid #AFAFAF; 
-    font-size:  16px;
-    font-weight: bold;
-    margin: 0px;
-    padding: 0px;
-    color: #D20005;
-}
 
 a:link, a:visited {
   color: #045491;
@@ -44,4 +35,51 @@ nav.global-nav ul{
 
 nav.global-nav ul link{
     text-decoration:none;
+}
+
+ul > li {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+    zoom:1;
+}
+
+ul {
+        float: right;
+}
+
+.linkheader {
+    color: white;
+}
+
+.navbar {
+  position: fixed;
+  height:50px;
+  width:100%;
+  background:#0e3472;
+}
+.contents-under {
+  padding-top: 50px;
+}
+
+.logo{
+    width: 75px;
+    height: 50px;
+}
+
+a:link  {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: white;
+}
+
+.tytulstrony{
+    padding-left: 100px;
+    margin-top:5px;
 }

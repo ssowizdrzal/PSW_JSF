@@ -6,6 +6,7 @@
       xmlns:f="http://java.sun.com/jsf/core">
 
     <h:head>
+        <h:outputStylesheet library="css" name="default.css"  />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--        <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>-->
@@ -15,28 +16,33 @@
     </h:head>
 
     <h:body>
-        <nav id="navbar">
-            <ul>
-                <li><h:link value="Home" outcome="home.xhtml" /></li>
-                <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
-                <li><h:link value="Info" outcome="info.xhtml" /></li>
-            </ul>
-        </nav>
-        
-        <div id="top">
-            <h1>Informacje o stronie</h1>
-        </div>
+         <div class="navbar">
+            <nav id="navbar" class="global-nav">
+                <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>   
+                <ul>
+                    <li><h:link value="Home" outcome="home.xhtml" /></li>
+                    <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
+                    <li><h:link value="Info" outcome="info.xhtml" /></li>
+                </ul>
+            </nav><!-- comment -->
+         </div><!-- comment -->
+         
+         
+        <div class="contents-under">
+            <div id="top">
+                <h1>Informacje o stronie</h1>
+            </div>
 
-        <div id="content" class="center_content">
-            <p>Na stronie mamy dostęp do newsów odnośnie lola.</p>
-            <p>Dodatkowo przez stronę możemy wypełnić formularz i zgłosić się na redaktora.</p>
+            <div id="content" class="center_content">
+                <p>Na stronie mamy dostęp do newsów odnośnie lola.</p>
+                <p>Dodatkowo przez stronę możemy wypełnić formularz i zgłosić się na redaktora.</p>
 
-        </div>
+            </div>
 
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
-        </div>
-
+            <div id="bottom">
+                <ui:insert name="bottom">W razie pytań nie zadawaj pytań.</ui:insert>
+            </div>
+         </div>
     </h:body>
 
 </html>
