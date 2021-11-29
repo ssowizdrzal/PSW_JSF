@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form>
+         <h1>Formularz:</h1>
+         <p>Wszystkie pola są wymagane!!!!!!</p>
+         <h:panelGrid columns="3">
+            <h:outputText value="Name:"/>
+            <h:inputText id="nameInputText" required="true"
+               requiredMessage="Please enter your name"
+               validatorMessage="Name must be fewer than 30 characters">
+               <f:validateLength maximum="30" />
+            </h:inputText>
+            <h:message for="nameInputText" styleClass="error"/>
+            <h:outputText value="E-mail:"/>
+            <h:inputText id="emailInputText" required="true"
+               requiredMessage="Please enter a valid e-mail address"
+               validatorMessage="Invalid e-mail address format">
+               <f:validateRegex pattern=
+                  "\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+            </h:inputText>
+            <h:message for="emailInputText" styleClass="error"/>
+            <h:outputText value="Phone:"/>
+            <h:inputText id="phoneInputText" required="true"
+               requiredMessage="Please enter a valid phone number"
+               validatorMessage="Invalid phone number format">
+               <f:validateRegex pattern=
+                  "((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" />
+            </h:inputText>
+            <h:message for="phoneInputText" styleClass="error"/>
+             <h:outputText value="Wiek:"/>
+            <h:inputText id="age" required="true"
+                         requiredMessage="Please enter a valid age">
+               <f:validateLongRange minimum="18" maximum="100"/>
+            </h:inputText>
+            <h:message for="age" styleClass="error"/>
+            <h:outputText value="Miasto:"/>
+            <h:selectOneMenu id="miasto" value ="#{userData.data}" >
+                 <f:selectItem itemValue = "1" itemLabel = "Wrocław" /> 
+                 <f:selectItem itemValue = "2" itemLabel = "Kraków" /> 
+                 <f:selectItem itemValue = "3" itemLabel = "Warszawa" /> 
+                 <f:selectItem itemValue = "4" itemLabel = "Gdansk" /> 
+            </h:selectOneMenu>
+            <h:message for="miasto" styleClass="error"/>
+             <h:outputText value="Stopień upośledzenia:"/>
+             <h:selectOneRadio id ="stopuposl">
+                <f:selectItem itemValue = "1" itemLabel = "1" /> 
+                <f:selectItem itemValue = "2" itemLabel = "2" />
+                <f:selectItem itemValue = "3" itemLabel = "3" /> 
+                <f:selectItem itemValue = "4" itemLabel = "4" />
+             </h:selectOneRadio>
+             <h:message for="stopuposl" styleClass="error"/>
+         </h:panelGrid>
+         <h:commandButton value="Submit"/>
+         <h:outputText escape="false" value="#{validationBean.result}"/>
+      </h:form>
+    </h:body>
+</html>
+
