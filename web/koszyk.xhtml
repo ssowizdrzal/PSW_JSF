@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+                <h:outputStylesheet library="css" name="default.css"  />
+
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+          <div class="navbar">
+            <nav id="navbar" class="global-nav">
+                <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>   
+                <ul>
+                    <li><h:link value="Home" outcome="home.xhtml" /></li>
+                    <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
+                    <li><h:link value="Info" outcome="info.xhtml" /></li>
+                    <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
+                </ul>
+            </nav>
+        </div>
+         
+        <div class="contents-under">
+            <div id="top">
+                <h1 class="naglowek_sklep">PODSUMOWANIE</h1>
+            </div>
+            <h2>KOSZYK</h2>
+            Zawartość koszyka:
+            <h:outputText escape="false" value="#{koszykBean.result2}"/>
+            <br></br>
+            Liczba produktów w koszyku:
+            <p>#{koszykBean.licznosc}</p>
+            Łączna cena produktów w koszyku: 
+            <p>#{koszykBean.lacznaCena}</p>
+            
+            
+            <h2>PODSUMOWANIE ZAMOWIENIA</h2>
+            
+            
+            <form>
+                Dostawa
+                <h:selectOneRadio value = ""> 
+                        <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
+                        <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
+                </h:selectOneRadio>   
+                Platnosc
+                <h:selectOneRadio value = ""> 
+                        <f:selectItem itemValue = "0" itemLabel = "BLIK 0zł" /> 
+                        <f:selectItem itemValue = "2" itemLabel = "PRZELEW 2zł" />
+                </h:selectOneRadio>   
+                
+                <h:commandButton value="Zatwierdź dostawę i płatność"/>
+                <h:outputText escape="false" value=""/>
+            </form>
+            
+            Łączna cena zamówienia:
+            <p>x</p>
+            
+            <form>
+                POTWIERDZAM ZAMÓWIENIE I PŁACĘ <br></br>
+                <h:commandButton value="POTWIERDZAM"/>
+                <h:outputText escape="false" value=""/>
+            </form>          
+            
+         </div>
+    </h:body>
+</html>
+

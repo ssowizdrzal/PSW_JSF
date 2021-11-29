@@ -58,7 +58,8 @@ ul {
   background:#0e3472;
 }
 .contents-under {
-  padding-top: 50px;
+  padding-top: 55px;
+  padding-left: 5px;
 }
 
 .logo{
@@ -82,4 +83,23 @@ a:active {
 .tytulstrony{
     padding-left: 100px;
     margin-top:5px;
+}
+
+.obrazek100x100{
+
+    width: 100px;
+    height: 100px;
+    float: right;
+    padding-right: 50px;
+    
+}
+
+.naglowek_sklep{
+    display:inline-block;
+    align-self: flex-end;
+    padding-left:50px;
+}
+
+.counter{
+        float: right;
 }
