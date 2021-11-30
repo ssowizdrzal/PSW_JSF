@@ -32,38 +32,37 @@
             <h:outputText escape="false" value="#{koszykBean.result2}"/>
             <br></br>
             Liczba produktów w koszyku:
-            <p>#{koszykBean.licznosc}</p>
-            Łączna cena produktów w koszyku: 
-            <p>#{koszykBean.lacznaCena}</p>
+            <p>#{koszykBean.licznosc}</p>              
+            Łączna cena produktów w koszyku:               
+            <p>#{koszykBean.lacznaCena}</p>           
             
+            Zapomniałeś czegoś kupić? <h:link  class="link-sklep" value="Kontynuuj zakupy" outcome="sklep.xhtml" />
             
             <h2>PODSUMOWANIE ZAMOWIENIA</h2>
-            
-            
-            <form>
+            <h:form>
                 Dostawa
-                <h:selectOneRadio value = ""> 
+                <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true" > 
                         <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
                         <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
                 </h:selectOneRadio>   
                 Platnosc
-                <h:selectOneRadio value = ""> 
+                <h:selectOneRadio value = "#{koszykBean.platnosc}" required="true" > 
                         <f:selectItem itemValue = "0" itemLabel = "BLIK 0zł" /> 
                         <f:selectItem itemValue = "2" itemLabel = "PRZELEW 2zł" />
-                </h:selectOneRadio>   
+                </h:selectOneRadio> 
                 
-                <h:commandButton value="Zatwierdź dostawę i płatność"/>
-                <h:outputText escape="false" value=""/>
-            </form>
+                <h:commandButton value="Zatwierdź dostawę i płatność"  disabled="#{!(koszykBean.button)}"/>
+            </h:form>
             
             Łączna cena zamówienia:
-            <p>x</p>
+            <p>#{koszykBean.finalCena}</p>
             
-            <form>
-                POTWIERDZAM ZAMÓWIENIE I PŁACĘ <br></br>
-                <h:commandButton value="POTWIERDZAM"/>
-                <h:outputText escape="false" value=""/>
-            </form>          
+            
+          
+            
+            POTWIERDZAM ZAMÓWIENIE I PŁACĘ <br></br>
+            <h:button outcome="potwierdzenie_zamowienia.xhtml" value="POTWIERDZAM" disabled="#{!(koszykBean.button)}"/>
+                 
             
          </div>
     </h:body>

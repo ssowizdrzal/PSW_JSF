@@ -3,13 +3,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
+        <h:outputStylesheet library="css" name="default.css"  />
+
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        ZAMÓWIENIE POTWIERDZONE.
-        
-        Zakupione produkty:
-        
+        <div class="navbar">
+            <nav id="navbar" class="global-nav">
+                <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>   
+                <ul>
+                    <li><h:link value="Home" outcome="home.xhtml" /></li>
+                    <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
+                    <li><h:link value="Info" outcome="info.xhtml" /></li>
+                    <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
+                </ul>
+            </nav>
+        </div><!-- comment -->
+        <div class="contents-under">
+            <h1>ZAMÓWIENIE POTWIERDZONE.</h1> <br></br>
+
+            Łączna cena: #{koszykBean.finalCena} <br></br>
+
+            #{koszykBean.reset()}
+            
+            Dziękujemy za zakupy z nami :) <br></br>
+
+            <br></br>
+            Zapomniałeś czegoś kupić?  <h:link class="link-sklep" value="Kontynuuj zakupy" outcome="sklep.xhtml" />
+        </div>
     </h:body>
 </html>
 

@@ -23,20 +23,30 @@ public class Koszyk implements Serializable {
 
     public String produktk;
 
-    public List<String> produkty;
-    public List<String> produkty2;
-    public List<String> produkty3;
+    public List<String> produkty = new ArrayList<String>();; ;
+    public List<String> produkty2 = new ArrayList<String>();
+    public List<String> produkty3 = new ArrayList<String>();
+    
+    public int dostawa;
+    public int platnosc;
+
+    public int getDostawa() {
+        return dostawa;
+    }
+
+    public void setDostawa(int dostawa) {
+        this.dostawa = dostawa;
+    }
+
+    public int getPlatnosc() {
+        return platnosc;
+    }
+
+    public void setPlatnosc(int platnosc) {
+        this.platnosc = platnosc;
+    }
     
     public Koszyk(){
-        if(produkty==null){
-           produkty = new ArrayList<String>();;
-        }
-        if(produkty2==null){
-           produkty2 = new ArrayList<String>();;
-        }
-        if(produkty3==null){
-           produkty3 = new ArrayList<String>();;
-        }
 
     }
 
@@ -81,13 +91,49 @@ public class Koszyk implements Serializable {
         this.produkty = produkty;
     }
 
-   
+    public int getFinalCena(){
+        return getLacznaCena()+dostawa+platnosc;
+    }
      
     public String getResult()
    {
      return "<p style=\"background-color:#696969;width:1000px;" +
             "padding:5px\">Wybrane produkty: " + produkty.toString()+ produkty2.toString() + produkty3.toString()  + "</p>";
    } 
+    
+    public String getResult3()
+   {
+       String result ="";
+       int przecinek=0;
+       for(String produkt : produkty){
+           if(przecinek==0){
+                result = result + produkt ;
+                przecinek++;
+           }else{
+                result = result + ", " + produkt ; 
+           }
+       }
+       for(String produkt : produkty2){
+           if(przecinek==0){
+                result = result + produkt;
+                przecinek++;
+           }else{
+                result = result + ", " + produkt; 
+           }
+       }for(String produkt : produkty3){
+           if(przecinek==0){
+                result = result + produkt ;
+                przecinek++;
+           }else{
+                result = result + ", " + produkt; 
+           }
+       }
+       if(przecinek==0){
+           return "";
+       }
+     return result+".</br>";
+   } 
+     
      public String getResult2()
    {
        String result ="<br> </br>";
@@ -148,4 +194,17 @@ public class Koszyk implements Serializable {
         return produkty.size()+produkty2.size()+produkty3.size();
     }
     
+    public boolean isButton(){
+        return getLicznosc()>0;
+    }
+    
+    public void reset(){
+    this.produkty = new ArrayList<String>();
+    this.produkty2 = new ArrayList<String>();
+    this.produkty3 = new ArrayList<String>();
+    
+    this.dostawa=0;
+    this.platnosc=0;
+
+    }
 }

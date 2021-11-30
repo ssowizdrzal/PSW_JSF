@@ -103,3 +103,16 @@ a:active {
 .counter{
         float: right;
 }
+
+.link-sklep:link{
+    color:black;
+}
+.link-sklep:visited{
+    color:black;
+}
+.link-sklep:hover{
+    color:black;
+}
+.link-sklep:active{
+    color:black;
+}
