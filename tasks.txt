@@ -1,36 +1,18 @@
-W katalogu zawierającym aplikację, w ramach projektu, utwórz folder o nazwie static i przekopiuj do niego wszystkie pliki
-statyczne (skrypty JavaScript, obrazki, arkusze CSS, etc.). Pliki te powinny pochodzić z rozwijanej
-strony w ramach list HTML, CSS oraz JS/DOM.
 
-Dodaj do projektu co najmniej kilka elementów typu JSF Page (Facelet). Odtwórz układ strony
-rozwijanej w ramach poprzednich list korzystając ze składni języka XHTML, posiłkując się specyfikacją
-biblioteki tagów, np.: https://javaserverfaces.github.io/docs/2.3/vdldocs/facelets/index.html oraz
-rozdziałem 26.6 w podręczniku.
+Strona powinna działać poprawnie również wtedy,
+gdy środowisko NetBeans zostanie wyłączone.
 
-Zadbaj o to, by opracowana witryna używała komponentów JSF tam, gdzie jest to możliwe. Witryna
-powinna składać się z co najmniej trzech stron: strony startowej, informacji o witrynie oraz
-formularza. 
+-------------------------------------------------
+2. W jaki sposób powiązać mapę zdefiniowaną w klasie z wartościami elementów interfejsu
+użytkownika?
+<h:selectOneMenu value="#{bean.integerProperty}">
+  <f:selectItems value="#{bean.mapProperty.entrySet()}" var="entry" 
+     itemValue="#{entry.key}" itemLabel="#{entry.value}" />
+</h:selectOneMenu>
 
-Na stronie z formularzem umieść pola umożliwiające wprowadzanie danych użytkownika (co najmniej
-trzech różnych typów np.: nazwisko, adres e-mail, numer telefonu, kod pocztowy, nazwa ulicy
-z numerem itp.). Wykorzystaj takie tagi, jak: h: inputText, h: selectOneMenu, h: selectOneRadio.
-Uzupełnij pola o funkcje walidacji w różnych postaciach (pole niepuste, wyrażenie regularne, adres email). W tym celu wykorzystaj tagi:
+3. Jak określić zakres czasu życia instancji zarządzanej klasy do pojedynczej sesji?
+@Request/View/Flow/Session/ApplicationScoped
+https://stackoverflow.com/questions/7031885/how-to-choose-the-right-bean-scope
 
-• f:validateLength,
-• f:validateLongRange, f:validateDoubleRange,
-• f:validateRequired,
-• f:validateRegex.
-
-Dodatkowo, zaimplementuj własny walidator w postaci klasy implementującej interfejs Validator. Do
-każdego z pól przypisz odpowiednie wiadomości w ramach atrybutów requiredMessage oraz
-validatorMessage informujące użytkownika o błędzie.
-
-Skonstruuj klasę typu bean służącą do opisywania obiektów reprezentujących walidowane byty. Niech
-klasa ta posiada zdefiniowane pole dla każdego elementu wprowadzania danych w formularzu.
-Powiąż walidację formularza z klasą opisującą obiekty reprezentujące walidowane byty. Do klasy
-dodaj metodę zwracającą opis obiektu po walidacji. Głównym rezultatem działania aplikacji powinna
-być możliwość otrzymania potwierdzenia odebrania danych z formularza. W przypadku błędów
-walidacji, należy wskazać, które pola zostały błędnie wypełnione wraz z opisem przyczyny błedu.
-
-Uruchom aplikację w serwerze Tomcat/GlassFish. Strona powinna działać poprawnie również wtedy,
-gdy środowisko NetBeans zostanie wyłączone. 
+--5. Gdzie są przechowywane informacje skojarzone z konkretną sesją?
+--6. Skąd serwer WWW wie która z sesji jest związana z przeglądarką użytkownika?

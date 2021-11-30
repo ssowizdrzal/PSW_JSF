@@ -6,23 +6,26 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-                <h:outputStylesheet library="css" name="default.css"  />
+        <h:outputStylesheet library="css" name="default.css"  />
 
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-          <div class="navbar">
+        <div class="navbar">
+
+            <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
+            <p>LOL PORTAL</p>
             <nav id="navbar" class="global-nav">
-                <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>   
+
                 <ul>
                     <li><h:link value="Home" outcome="home.xhtml" /></li>
                     <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
                     <li><h:link value="Info" outcome="info.xhtml" /></li>
                     <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
                 </ul>
-            </nav>
+            </nav><!-- comment -->
         </div>
-         
+
         <div class="contents-under">
             <div id="top">
                 <h1 class="naglowek_sklep">PODSUMOWANIE</h1>
@@ -35,36 +38,36 @@
             <p>#{koszykBean.licznosc}</p>              
             Łączna cena produktów w koszyku:               
             <p>#{koszykBean.lacznaCena}</p>           
-            
+
             Zapomniałeś czegoś kupić? <h:link  class="link-sklep" value="Kontynuuj zakupy" outcome="sklep.xhtml" />
-            
+
             <h2>PODSUMOWANIE ZAMOWIENIA</h2>
             <h:form>
                 Dostawa
                 <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true" > 
-                        <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
-                        <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
+                    <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
+                    <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
                 </h:selectOneRadio>   
                 Platnosc
                 <h:selectOneRadio value = "#{koszykBean.platnosc}" required="true" > 
-                        <f:selectItem itemValue = "0" itemLabel = "BLIK 0zł" /> 
-                        <f:selectItem itemValue = "2" itemLabel = "PRZELEW 2zł" />
+                    <f:selectItem itemValue = "0" itemLabel = "BLIK 0zł" /> 
+                    <f:selectItem itemValue = "2" itemLabel = "PRZELEW 2zł" />
                 </h:selectOneRadio> 
-                
+
                 <h:commandButton value="Zatwierdź dostawę i płatność"  disabled="#{!(koszykBean.button)}"/>
             </h:form>
-            
+
             Łączna cena zamówienia:
             <p>#{koszykBean.finalCena}</p>
-            
-            
-          
-            
+
+
+
+
             POTWIERDZAM ZAMÓWIENIE I PŁACĘ <br></br>
             <h:button outcome="potwierdzenie_zamowienia.xhtml" value="POTWIERDZAM" disabled="#{!(koszykBean.button)}"/>
-                 
-            
-         </div>
+
+
+        </div>
     </h:body>
 </html>
 

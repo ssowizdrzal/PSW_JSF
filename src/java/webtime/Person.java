@@ -17,14 +17,27 @@ public class Person implements Serializable {
     private long wiek;
     private String miasto;
     private int stopien;
+    private double waga;
+    
+    
+
+    public double getWaga() {
+        return waga;
+    }
+
+    public void setWaga(double waga) {
+        this.waga = waga;
+    }
     
     
     public String getResult()
    {
       if ( nazwisko != null && email != null && phone != null )
-         return "<p style=\"background-color:#696969;width:1000px;" +
-            "padding:5px\">Name: " + getNazwisko() + "<br/>E-Mail: " +
-            getEmail() + "<br/>Phone: " + getPhone() + "<br/>Miasto: " + getMiasto()+ "<br/>Stopień: " + getStopien() + "</p>";
+//         return "<p style=\"background-color:#696969;width:1000px;" +
+//            "padding:5px\">Name: " + getNazwisko() + "<br/>E-Mail: " +
+//            getEmail() + "<br/>Phone: " + getPhone() + "<br/>Miasto: " + getMiasto()+ "<br/>Stopień: " + getStopien() + "</p>";
+       return "<p style=\"background-color:#696969; width:auto;" +
+            "padding:5px\">SUCCESS</p>";
       else
          return ""; // request has not yet been made
    } 

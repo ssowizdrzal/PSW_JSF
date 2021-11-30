@@ -13,15 +13,18 @@
 
     <h:body>
         <div class="navbar">
+
+            <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
+            <p>LOL PORTAL</p>
             <nav id="navbar" class="global-nav">
-                <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>   
+
                 <ul>
                     <li><h:link value="Home" outcome="home.xhtml" /></li>
                     <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
                     <li><h:link value="Info" outcome="info.xhtml" /></li>
                     <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
                 </ul>
-            </nav>
+            </nav><!-- comment -->
         </div>
          
         <div class="contents-under">
@@ -30,8 +33,11 @@
             </div>
 
             <div id="content" class="center_content">
+                
                 <p>Na stronie mamy dostęp do newsów odnośnie lola.</p>
                 <p>Dodatkowo przez stronę możemy wypełnić formularz i zgłosić się na redaktora.</p>
+            
+                #{koszykBean.print}
             </div>
 
             <div id="bottom">

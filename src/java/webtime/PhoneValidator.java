@@ -17,13 +17,13 @@ import javax.faces.validator.ValidatorException;
 @FacesValidator("phoneValidatorr")
 public class PhoneValidator implements Validator {
 
-    private static final String EMAIL_PATTERN = "^[1-9]\\d{2}-\\d{3}-\\d{3}$";
+    private static final String PHONE_PATTERN = "^[1-9]\\d{2}-\\d{3}-\\d{3}$";
     
     private Pattern pattern;
     private Matcher matcher;
         
     public PhoneValidator(){
-	 pattern = Pattern.compile(EMAIL_PATTERN);
+	 pattern = Pattern.compile(PHONE_PATTERN);
     }
     
     

@@ -11,6 +11,7 @@ import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -100,11 +101,15 @@ public class Koszyk implements Serializable {
      return "<p style=\"background-color:#696969;width:1000px;" +
             "padding:5px\">Wybrane produkty: " + produkty.toString()+ produkty2.toString() + produkty3.toString()  + "</p>";
    } 
-    
+    public String getPrint(){
+        String session =  FacesContext.getCurrentInstance().getExternalContext().getSession(true).toString();
+        return "" + session; 
+    }
     public String getResult3()
    {
        String result ="";
        int przecinek=0;
+       if(produkty!=null)
        for(String produkt : produkty){
            if(przecinek==0){
                 result = result + produkt ;
@@ -113,6 +118,7 @@ public class Koszyk implements Serializable {
                 result = result + ", " + produkt ; 
            }
        }
+       if(produkty2!=null)
        for(String produkt : produkty2){
            if(przecinek==0){
                 result = result + produkt;
@@ -120,7 +126,9 @@ public class Koszyk implements Serializable {
            }else{
                 result = result + ", " + produkt; 
            }
-       }for(String produkt : produkty3){
+       }
+       if(produkty3!=null)
+       for(String produkt : produkty3){
            if(przecinek==0){
                 result = result + produkt ;
                 przecinek++;
@@ -138,6 +146,7 @@ public class Koszyk implements Serializable {
    {
        String result ="<br> </br>";
        int przecinek=0;
+       if(produkty!=null)
        for(String produkt : produkty){
            if(przecinek==0){
                 result = result + produkt ;
@@ -146,6 +155,7 @@ public class Koszyk implements Serializable {
                 result = result + ", <br> </br> " + produkt ; 
            }
        }
+       if(produkty2!=null)
        for(String produkt : produkty2){
            if(przecinek==0){
                 result = result + produkt;
@@ -153,7 +163,9 @@ public class Koszyk implements Serializable {
            }else{
                 result = result + ", <br> </br> " + produkt; 
            }
-       }for(String produkt : produkty3){
+       }
+       if(produkty3!=null)
+       for(String produkt : produkty3){
            if(przecinek==0){
                 result = result + produkt ;
                 przecinek++;
@@ -191,7 +203,12 @@ public class Koszyk implements Serializable {
  
     
     public int getLicznosc(){
-        return produkty.size()+produkty2.size()+produkty3.size();
+
+        int prod_1 = (produkty==null) ? 0 :  produkty.size();
+        int prod_2 = (produkty2==null) ? 0 :  produkty2.size();
+        int prod_3 = (produkty3==null) ? 0 :  produkty3.size();
+
+        return prod_1 + prod_2 + prod_3;
     }
     
     public boolean isButton(){
