@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition> 
+        <h:head>
+            <h:outputStylesheet library="css" name="default.css"  />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>LOL PORTAL INFO</title>
+        </h:head>
+
+        <h:body>
+            <div class="contents-under">
+                <div id="top">
+                    <h1>Informacje o stronie</h1>
+                </div>
+
+                <div id="content" class="center_content">
+
+                    <p>Na stronie mamy dostęp do newsów odnośnie lola.</p>
+                    <p>Dodatkowo przez stronę możemy wypełnić formularz i zgłosić się na redaktora.</p>
+
+                </div>
+
+                <br></br>
+                <div id="bottom">
+                    <ui:insert name="bottom">W razie pytań nie zadawaj pytań.</ui:insert>
+                </div>
+             </div>
+             <ui:include src="/footer.xhtml" />
+
+        </h:body>
+    </ui:composition>	
+</html>
