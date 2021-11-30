@@ -42,19 +42,18 @@
             Zapomniałeś czegoś kupić? <h:link  class="link-sklep" value="Kontynuuj zakupy" outcome="sklep.xhtml" />
 
             <h2>PODSUMOWANIE ZAMOWIENIA</h2>
-            <h:form>
+            <h:form >
                 Dostawa
-                <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true" > 
+                <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true"  onchange = "submit()"> 
                     <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
                     <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
                 </h:selectOneRadio>   
                 Platnosc
-                <h:selectOneRadio value = "#{koszykBean.platnosc}" required="true" > 
+                <h:selectOneRadio value = "#{koszykBean.platnosc}" required="true"  onchange = "submit()" > 
                     <f:selectItem itemValue = "0" itemLabel = "BLIK 0zł" /> 
                     <f:selectItem itemValue = "2" itemLabel = "PRZELEW 2zł" />
                 </h:selectOneRadio> 
-
-                <h:commandButton value="Zatwierdź dostawę i płatność"  disabled="#{!(koszykBean.button)}"/>
+                
             </h:form>
 
             Łączna cena zamówienia:
