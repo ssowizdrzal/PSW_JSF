@@ -75,6 +75,7 @@ public class initKategorie implements Serializable {
 
         return h1;
     }
+    
 
     public boolean isShow0() {
         return wybor == 0;

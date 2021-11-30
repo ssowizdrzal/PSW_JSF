@@ -3,16 +3,8 @@ Strona powinna działać poprawnie również wtedy,
 gdy środowisko NetBeans zostanie wyłączone.
 
 -------------------------------------------------
-2. W jaki sposób powiązać mapę zdefiniowaną w klasie z wartościami elementów interfejsu
-użytkownika?
-<h:selectOneMenu value="#{bean.integerProperty}">
-  <f:selectItems value="#{bean.mapProperty.entrySet()}" var="entry" 
-     itemValue="#{entry.key}" itemLabel="#{entry.value}" />
-</h:selectOneMenu>
-
-3. Jak określić zakres czasu życia instancji zarządzanej klasy do pojedynczej sesji?
-@Request/View/Flow/Session/ApplicationScoped
-https://stackoverflow.com/questions/7031885/how-to-choose-the-right-bean-scope
-
 --5. Gdzie są przechowywane informacje skojarzone z konkretną sesją?
 --6. Skąd serwer WWW wie która z sesji jest związana z przeglądarką użytkownika?
+
+JSF will automatically construct an HttpSession to hold it
+Since JSF requires session-scope objects more often than most J2EE frameworks, JSF apps tend to create sessions fairly soon after a user hits the site.
