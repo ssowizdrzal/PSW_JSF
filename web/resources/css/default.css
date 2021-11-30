@@ -19,7 +19,7 @@ a:link:hover, a:visited:hover  {
   text-decoration : underline;
 }
 
-
+/*
 global-nav{
     margin-left: auto;
     margin-right:1%;
@@ -39,7 +39,6 @@ nav.global-nav ul link{
 
 ul > li {
     display: inline-block;
-    /* You can also add some margins here to make it look prettier */
     zoom:1;
 }
 
@@ -77,8 +76,8 @@ ul {
 }
 
 .logo{
-    width: 75px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 a:link  {
@@ -98,7 +97,7 @@ a:active {
     padding-left: 100px;
 
 }
-
+*/
 .obrazek100x100{
     opacity: 0.5;
     width: 70px;
@@ -168,3 +167,70 @@ a:active {
 .contents-under{
   padding: 10px;
 }
+
+.footer {
+  height: 70px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0e3472;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+    padding-top: 1px;
+    border: #ffffff;
+    border-image-slice: 12 12 12 12;
+    border-image-width: 12px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: repeat repeat;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-5.png");
+    border-style: solid; 
+}
+
+footer a:link {
+    background-color: yellowgreen;
+}
+
+
+#przenikanie {
+    height:400px;
+    width:400px; 
+    margin-bottom: 20px;
+    position: relative; 
+  }
+  
+  #przenikanie img {
+
+    position: absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+   
+  }
+  
+  #przenikanie img.obraz-2:hover {
+    opacity:0;
+  }
+  
+  .logo-transormed {
+      position: relative;
+      transform: skew(10deg, 20deg) scale(1.4, 0.7) rotate(0.5turn);
+      -webkit-transform: skew(10deg, 20deg) scale(1.4, 0.7) rotate(0.5turn);
+      -moz-transform: skew(10deg, 20deg) scale(1.4, 0.7) rotate(0.5turn);
+      -ms-transform: skew(10deg, 20deg) scale(1.4, 0.7) rotate(0.5turn);
+      -o-transform: skew(10deg, 20deg) scale(1.4, 0.7) rotate(0.5turn);
+}
+
+.section_right{
+    float: right;  
+    margin-top: 30px;
+}
+#przenikanie img.obraz-2:hover {
+  opacity:0;
+}
+  

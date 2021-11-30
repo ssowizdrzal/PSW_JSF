@@ -2,27 +2,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:outputStylesheet library="css" name="default.css"  />
     <h:head>
-        <title>Facelet Title</title>
+        <title>Formularz</title>
 
     </h:head>
     <h:body>
-        <div class="navbar">
-
-            <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
-            <p>LOL PORTAL</p>
-            <nav id="navbar" class="global-nav">
-
-                <ul>
-                    <li><h:link value="Home" outcome="home.xhtml" /></li>
-                    <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
-                    <li><h:link value="Info" outcome="info.xhtml" /></li>
-                    <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
-                </ul>
-            </nav><!-- comment -->
-        </div>
+        <ui:include src="/header.xhtml" />
         <div class="contents-under">
 
 

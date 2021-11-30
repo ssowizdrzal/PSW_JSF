@@ -9,13 +9,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <!--        <h:outputStylesheet name="./css/default.css"/>
                 <h:outputStylesheet name="./css/cssLayout.css"/>-->
-        <title>Facelets Template</title>
+        <title> LOL PORTAL </title>
 
 
     </h:head>
 
     <h:body>
-        <div class="navbar">
+<!--        <div class="navbar">
 
             <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
             <p>LOL PORTAL</p>
@@ -27,11 +27,17 @@
                     <li><h:link value="Info" outcome="info.xhtml" /></li>
                     <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
                 </ul>
-            </nav><!-- comment -->
-        </div>
-
+            </nav> comment 
+        </div>-->
+        <ui:include src="/header.xhtml" />
         <div class="contents-under">
             <div id="content" class="center_content">
+                <section class="section_right">
+                    <div id="przenikanie">
+                        <img class="obraz-1" src="resources/images/lol400-1.jpg" alt="image lol 1 "/>
+                        <img class="obraz-2" src="resources/images/lol400-2.jpg" alt="image lol 2 " />
+                    </div>
+                </section>
                 <section class="blog-posts">
                     <h2 id="top-header" ><b>Recent News</b></h2>
                     <p>Check our recent news</p>
@@ -134,12 +140,23 @@
                             he never did. I only just managed for two weeks, but he’s managed for a lifetime.
                             <br> </br>  <br></br>
                             He deserves more credit. He may not be the brightest spark, but he was something we should all strive for—the will to never falter.
+                            <br></br>   <br></br>
+                            Now, until recently, I just let this be, but over the last two weeks, I went on a diet, didn’t eat a lot, drank tons of water and within two weeks lost 5KG.
+                            <br></br>   <br></br>
+                            But what struck me the most was halfway through the week, I wanted to eat so badly. I wanted to buy a sleeve of cookies and nom them down. But in my mind,
+                            I said to myself, ‘I will not falter,’ and that’s when it hit me. Garen deserves a lot more respect; that man never falters; in all the years he’s been around,
+                            he never did. I only just managed for two weeks, but he’s managed for a lifetime.
+                            <br> </br>  <br></br>
+                            He deserves more credit. He may not be the brightest spark, but he was something we should all strive for—the will to never falter.
                         </p>
+                         <br> </br>
                     </article>
 
                 </section>
             </div>
         </div>
+        <ui:include src="/footer.xhtml" />
+
     </h:body>
 
 </html>

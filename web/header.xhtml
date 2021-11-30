@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="header.css"  />
+    </h:head>
+    
+    <h:body>
+         <header class="header">
+            <div class="header-content">
+               <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
+               <h1>LOL PORTAL</h1>
+               <nav class="global-nav">
+                   <ul>
+                       <li><h:link value="Home" outcome="home.xhtml" /></li>
+                       <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
+                       <li><h:link value="Info" outcome="info.xhtml" /></li>
+                       <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
+                   </ul>
+               </nav>
+           </div>
+         </header>
+<!--         <div class="navbar">
+            <h:graphicImage url="/resources/images/lol-icon.png" class="logo"/>    
+            <p>LOL PORTAL</p>
+            <nav id="navbar" class="global-nav">
+
+                <ul>
+                    <li><h:link value="Home" outcome="home.xhtml" /></li>
+                    <li><h:link value="Formularz" outcome="formularz.xhtml" /></li>
+                    <li><h:link value="Info" outcome="info.xhtml" /></li>
+                    <li><h:link value="Sklep" outcome="sklep.xhtml" /></li>
+                </ul>
+            </nav>
+        </div>-->
+    </h:body>
+</html>
+
