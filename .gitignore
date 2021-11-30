@@ -1,10 +1,11 @@
 /dist/
 
 ### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-.nb-gradle/
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/.nb-gradle/
+/nbproject/private/
