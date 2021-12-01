@@ -16,6 +16,7 @@ import javax.faces.event.ValueChangeEvent;
  *
  * @author Dominik
  */
+
 @ManagedBean(name = "kategorieBean")
 @SessionScoped
 public class initKategorie implements Serializable {

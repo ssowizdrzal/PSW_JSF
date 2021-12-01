@@ -62,7 +62,7 @@
                 <h:panelGroup id="pannel1" rendered="#{kategorieBean.show0}">
                     <h3>#{kategorieBean.kategoria1.nazwa}</h3>
 
-                    <h:selectManyCheckbox value="#{koszykBean.produkty}" >
+                    <h:selectManyCheckbox value="#{koszykBean.produkty}" onchange = "submit()">
                         <c:forEach var="przedmiot" items="#{kategorieBean.kategoria1.przedmiotyZKategorii}">
                             <f:selectItem itemValue ="#{przedmiot.key}"  /> #{przedmiot.key}, Cena: #{przedmiot.value} <br> </br>
                         </c:forEach>
@@ -70,10 +70,10 @@
 
                 </h:panelGroup>
 
-                <h:panelGroup  id="pannel2"  rendered="#{kategorieBean.show1}">
+                <h:panelGroup  id="pannel2"  rendered="#{kategorieBean.show1}" >
                     <h3>#{kategorieBean.kategoria2.nazwa}</h3>
 
-                    <h:selectManyCheckbox value="#{koszykBean.produkty2}" >
+                    <h:selectManyCheckbox value="#{koszykBean.produkty2}" onchange = "submit()">
                         <c:forEach var="przedmiot" items="#{kategorieBean.kategoria2.przedmiotyZKategorii}">
                             <f:selectItem itemValue ="#{przedmiot.key}" /> #{przedmiot.key}, Cena: #{przedmiot.value}  <br> </br>
                         </c:forEach>
@@ -84,7 +84,7 @@
                 <h:panelGroup  id="pannel3" rendered="#{kategorieBean.show2}">
                     <h3>#{kategorieBean.kategoria3.nazwa}</h3>
 
-                    <h:selectManyCheckbox value="#{koszykBean.produkty3}">
+                    <h:selectManyCheckbox value="#{koszykBean.produkty3}" onchange = "submit()">
                         <c:forEach var="przedmiot" items="#{kategorieBean.kategoria3.przedmiotyZKategorii}">
                             <f:selectItem itemValue ="#{przedmiot.key}" /> #{przedmiot.key}, Cena: #{przedmiot.value} <br> </br>
                         </c:forEach>
@@ -92,7 +92,7 @@
 
                 </h:panelGroup>
 
-                <h:commandButton value="Submit"/>
+<!--                <h:commandButton value="Submit"/>-->
 
                 <br></br>
                 Wybrane produkty: <h:outputText escape="false" value="#{koszykBean.result3}"/>
