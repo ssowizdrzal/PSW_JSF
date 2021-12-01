@@ -30,4 +30,11 @@ public class Kategoria {
         return nazwa;
     }
     
+    public boolean containsPrzedmiot(String przedmiot){
+        return przedmioty.containsKey(przedmiot);
+    }
+    
+    public int getCenaDlaPrzedmiotu(String przedmiot){
+        return przedmioty.get(przedmiot);
+    }
 }

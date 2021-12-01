@@ -88,4 +88,13 @@ public class initKategorie implements Serializable {
     public boolean isShow2() {
         return wybor == 2;
     }
+    
+    public int getCenaDlaPrzedmiotu(String przedmiot){
+        for(Kategoria kategoria : kategorie){
+            if(kategoria.containsPrzedmiot(przedmiot)){
+                return kategoria.getCenaDlaPrzedmiotu(przedmiot);
+            }
+        }
+        return -1;
+    }
 }

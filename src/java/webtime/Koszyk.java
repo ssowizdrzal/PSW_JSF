@@ -145,32 +145,45 @@ public class Koszyk implements Serializable {
      public String getResult2()
    {
        String result ="<br> </br>";
+       initKategorie ik = new initKategorie();
+       
        int przecinek=0;
        if(produkty!=null)
        for(String produkt : produkty){
+           int cena=0;
+           cena = ik.getCenaDlaPrzedmiotu(produkt);
            if(przecinek==0){
-                result = result + produkt ;
+                
+                result = result + produkt+" "+cena + " zł" ;
                 przecinek++;
            }else{
-                result = result + ", <br> </br> " + produkt ; 
+                result = result + ", <br> </br> " + produkt +" "+cena + " zł" ; 
            }
        }
        if(produkty2!=null)
-       for(String produkt : produkty2){
+       for(String produkt : produkty2){ 
+           int cena=0;
+           cena = ik.getCenaDlaPrzedmiotu(produkt);
            if(przecinek==0){
-                result = result + produkt;
+               
+               
+                result = result + produkt+" "+cena + " zł" ;
                 przecinek++;
            }else{
-                result = result + ", <br> </br> " + produkt; 
+                result = result + ", <br> </br> " + produkt +" "+cena + " zł" ; 
            }
        }
        if(produkty3!=null)
        for(String produkt : produkty3){
+           int cena=0;
+           cena = ik.getCenaDlaPrzedmiotu(produkt); 
+                
            if(przecinek==0){
-                result = result + produkt ;
+                
+                result = result + produkt+" "+cena + " zł" ;
                 przecinek++;
            }else{
-                result = result + ", <br> </br>  " + produkt; 
+                result = result + ", <br> </br>  " + produkt +" "+cena + " zł" ; 
            }
        }
      return result+". <br> </br>";
