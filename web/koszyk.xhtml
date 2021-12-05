@@ -23,14 +23,15 @@
             Liczba produktów w koszyku:
             <p>#{koszykBean.licznosc}</p>              
             Łączna cena produktów w koszyku:               
-            <p>#{koszykBean.lacznaCena}</p>           
+            <p>#{koszykBean.lacznaCena} zł</p>           
 
             Zapomniałeś czegoś kupić? <h:link  class="link-sklep" value="Kontynuuj zakupy" outcome="sklep.xhtml" />
 
             <h2>PODSUMOWANIE ZAMOWIENIA</h2>
             <h:form >
                 Dostawa
-                <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true"  onchange = "submit()"> 
+                <h:selectOneRadio value = "#{koszykBean.dostawa}" required="true"  onchange = "submit()" > 
+                    <f:selectItem itemValue = "0" itemLabel = "ODBIÓR WŁASNY 0zł    " /> 
                     <f:selectItem itemValue = "8" itemLabel = "INPOST PACZKOMAT 8zł" /> 
                     <f:selectItem itemValue = "15" itemLabel = "KURIER 15zł" />
                 </h:selectOneRadio>   
@@ -43,7 +44,7 @@
             </h:form>
 
             Łączna cena zamówienia:
-            <p>#{koszykBean.finalCena}</p>
+            <p>#{koszykBean.finalCena} zł</p>
 
 
 
